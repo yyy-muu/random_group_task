@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Deployment instructions
+1. git cloneコマンドをターミナルで実行し、ソースコードを取得します。
+```
+$ git clone https://github.com/yyy-muu/docker_rails.git
+```
 
-Things you may want to cover:
+2. カレントディレクトリを、"docker_rails"に移動します。
+```
+$ cd docker_rails
+```
 
-* Ruby version
+3. docker-compose upコマンドで、コンテナを実行します。(デタッチド・モード)
+```
+$ docker-compose up --build -d
+```
 
-* System dependencies
+4. 下記コマンドをターミナルで実行し、データベースを作成します。
+```
+$ docker-compose run web rails db:create
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. ブラウザで下記にアクセスします。Railsサーバが問題なく起動していれば、Railsのウェルカムページが表示されます。
+```
+http://localhost:3000
+```
