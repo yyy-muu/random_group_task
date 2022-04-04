@@ -11,14 +11,14 @@ $ git clone https://github.com/yyy-muu/docker_rails.git
 $ cd docker_rails
 ```
 
-3. docker-compose upコマンドで、コンテナを実行します。(デタッチド・モード)
-```
-$ docker-compose up --build -d
-```
-
-4. 下記コマンドをターミナルで実行し、データベースを作成します。
+3. 下記コマンドをターミナルで実行し、データベースを作成します。
 ```
 $ docker-compose run web rails db:create
+```
+
+4. docker-compose upコマンドで、コンテナを実行します。
+```
+$ docker-compose up --build
 ```
 
 5. ブラウザで下記にアクセスします。Railsサーバが問題なく起動していれば、Railsのウェルカムページが表示されます。

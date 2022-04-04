@@ -18,8 +18,10 @@ services:
       - db
 
   db:
-    image: mysql
+    image: mysql:8.0
     volumes:
       - 'db-data:/var/lib/mysql'
     environment:
       MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - '3306:3306'
