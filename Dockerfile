@@ -8,11 +8,5 @@ WORKDIR /docker_rails
 COPY Gemfile Gemfile.lock /docker_rails/
 RUN bundle install && rails webpacker:install
 
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 3000
-
-RUN rails new . --force --database=mysql
-
+RUN rm -f /myapp/tmp/pids/server.pid
 CMD [ "rails", "s", "-b", "0.0.0.0" ]
