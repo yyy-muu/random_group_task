@@ -18,7 +18,7 @@ $ docker-compose run web rails db:create
 
 4. docker-compose upコマンドで、コンテナを実行します。
 ```
-$ docker-compose up --build
+$ docker-compose up
 ```
 
 5. ブラウザで下記にアクセスします。Railsサーバが問題なく起動していれば、Railsのウェルカムページが表示されます。
